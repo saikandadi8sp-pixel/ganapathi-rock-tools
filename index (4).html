@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ganapathi Rock Tools – Borewell & DTH Equipment Hyderabad</title>
+  <meta name="description" content="Ganapathi Rock Tools – Hyderabad's trusted supplier of borewell drilling equipment. DTH Hammers, Drill Bits, Drill Rods, Casing Pipes. Call +91 99486 99156."/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --red: #CC2222;
+      --red-dark: #991818;
+      --red-light: #E53333;
+      --black: #0D0D0D;
+      --dark: #141414;
+      --dark2: #1C1C1C;
+      --steel: #2E2E2E;
+      --mid: #555;
+      --gray: #999;
+      --light: #CCC;
+      --off: #E8E8E8;
+      --white: #FFFFFF;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: #222; font-family: 'Open Sans', sans-serif; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--black);
+      color: var(--light);
+      font-size: 12px;
+      padding: 8px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar a { color: var(--light); transition: color .2s; }
+    .topbar a:hover { color: var(--red-light); }
+    .topbar-left { display: flex; gap: 28px; }
+    .topbar-right { display: flex; gap: 20px; align-items: center; }
+    .topbar-icon { margin-right: 5px; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--white);
+      border-bottom: 3px solid var(--red);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 60px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 14px; padding: 14px 0; }
+    .logo-badge {
+      width: 52px; height: 52px; background: var(--red);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 18px; color: white;
+      clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+    }
+    .logo-words { line-height: 1.15; }
+    .logo-main { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 22px; color: var(--black); letter-spacing: 0.5px; }
+    .logo-sub { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--red); font-weight: 600; }
+
+    nav ul { list-style: none; display: flex; height: 100%; }
+    nav ul li { position: relative; }
+    nav ul li a {
+      display: flex; align-items: center; height: 68px; padding: 0 20px;
+      font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 14px;
+      letter-spacing: 1px; text-transform: uppercase; color: #333;
+      transition: color .2s, background .2s;
+      border-bottom: 3px solid transparent; margin-bottom: -3px;
+    }
+    nav ul li a:hover, nav ul li a.active { color: var(--red); border-bottom-color: var(--red); }
+    .nav-contact-btn {
+      background: var(--red); color: white !important; padding: 0 28px !important;
+      border-bottom: none !important; margin-bottom: 0 !important;
+      transition: background .2s !important;
+    }
+    .nav-contact-btn:hover { background: var(--red-dark) !important; color: white !important; }
+
+    /* ── HERO SLIDER ── */
+    #hero { position: relative; overflow: hidden; height: 580px; }
+    .slides { display: flex; height: 100%; transition: transform .7s cubic-bezier(.7,0,.3,1); }
+    .slide {
+      min-width: 100%; height: 100%; position: relative;
+      display: flex; align-items: center;
+    }
+    .slide-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+    }
+    .slide-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(100deg, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.45) 60%, transparent 100%);
+    }
+    .slide-content { position: relative; z-index: 2; padding: 0 80px; max-width: 680px; }
+    .slide-tag {
+      display: inline-block; background: var(--red); color: white;
+      font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+      padding: 5px 14px; margin-bottom: 20px;
+    }
+    .slide-content h1 {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700;
+      font-size: clamp(42px, 5.5vw, 72px); line-height: 1.05;
+      color: white; text-transform: uppercase; margin-bottom: 18px;
+    }
+    .slide-content h1 span { color: var(--red-light); }
+    .slide-content p { color: rgba(255,255,255,0.82); font-size: 16px; line-height: 1.7; margin-bottom: 32px; font-weight: 300; }
+    .slide-btn {
+      display: inline-block; background: var(--red); color: white;
+      padding: 14px 36px; font-family: 'Rajdhani', sans-serif; font-weight: 700;
+      font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+      transition: background .2s, transform .2s;
+    }
+    .slide-btn:hover { background: var(--red-dark); transform: translateY(-2px); }
+    .slide-btn-outline {
+      display: inline-block; border: 2px solid rgba(255,255,255,0.6); color: white;
+      padding: 14px 36px; font-family: 'Rajdhani', sans-serif; font-weight: 700;
+      font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+      margin-left: 12px; transition: border-color .2s, color .2s;
+    }
+    .slide-btn-outline:hover { border-color: var(--red-light); color: var(--red-light); }
+
+    /* slider controls */
+    .slider-dots { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10; }
+    .dot { width: 10px; height: 10px; background: rgba(255,255,255,0.4); cursor: pointer; transition: background .3s; }
+    .dot.active { background: var(--red); }
+    .slider-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%); z-index: 10;
+      width: 48px; height: 48px; background: rgba(0,0,0,0.5); color: white;
+      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      font-size: 20px; transition: background .2s; border: none;
+    }
+    .slider-arrow:hover { background: var(--red); }
+    .arrow-left { left: 20px; }
+    .arrow-right { right: 20px; }
+
+    /* ── STATS BAND ── */
+    .stats-band {
+      background: var(--black);
+      display: grid; grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-cell {
+      padding: 32px 24px; text-align: center;
+      border-right: 1px solid var(--steel);
+    }
+    .stat-cell:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 46px; color: var(--red-light); line-height: 1;
+    }
+    .stat-lbl { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gray); margin-top: 6px; }
+
+    /* ── SECTION HEADER ── */
+    .sec-header { text-align: center; margin-bottom: 56px; }
+    .sec-tag {
+      display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--red); margin-bottom: 14px;
+      position: relative; padding: 0 20px;
+    }
+    .sec-tag::before, .sec-tag::after {
+      content: ''; position: absolute; top: 50%; height: 1px; width: 40px; background: var(--red);
+    }
+    .sec-tag::before { right: 100%; margin-right: -20px; }
+    .sec-tag::after { left: 100%; margin-left: -20px; }
+    .sec-header h2 {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700;
+      font-size: clamp(32px, 4vw, 48px); text-transform: uppercase; color: var(--black); line-height: 1.1;
+    }
+    .sec-header p { color: var(--mid); font-size: 15px; line-height: 1.7; max-width: 580px; margin: 14px auto 0; }
+
+    /* ── INDUSTRIES ── */
+    #industries { padding: 90px 60px; background: var(--off); }
+    .industries-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+    .industry-card {
+      position: relative; overflow: hidden; cursor: pointer;
+      height: 260px; group: true;
+    }
+    .industry-card-bg {
+      position: absolute; inset: 0; background-size: cover; background-position: center;
+      transition: transform .5s ease;
+    }
+    .industry-card:hover .industry-card-bg { transform: scale(1.07); }
+    .industry-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+      transition: background .3s;
+    }
+    .industry-card:hover .industry-overlay { background: linear-gradient(0deg, rgba(180,20,20,0.8) 0%, rgba(0,0,0,0.3) 100%); }
+    .industry-label {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 28px;
+    }
+    .industry-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+    .industry-label h3 {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 22px;
+      text-transform: uppercase; color: white; letter-spacing: 0.5px;
+    }
+    .industry-label p { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 4px; }
+
+    /* ── PRODUCTS ── */
+    #products { padding: 90px 60px; background: white; }
+    .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .product-card {
+      border: 1px solid #E0E0E0; transition: box-shadow .3s, transform .3s; position: relative; overflow: hidden;
+    }
+    .product-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-4px); }
+    .product-card-top {
+      background: var(--dark2); height: 180px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 64px; position: relative;
+      border-bottom: 3px solid transparent;
+      transition: border-color .3s;
+    }
+    .product-card:hover .product-card-top { border-color: var(--red); }
+    .product-card-top-num {
+      position: absolute; top: 14px; right: 16px;
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 40px;
+      color: rgba(255,255,255,0.06);
+    }
+    .product-card-body { padding: 24px 24px 28px; }
+    .product-cat {
+      font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--red); font-weight: 600; margin-bottom: 8px;
+    }
+    .product-card-body h3 {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 20px;
+      text-transform: uppercase; color: var(--black); margin-bottom: 10px;
+    }
+    .product-card-body p { font-size: 13px; color: var(--mid); line-height: 1.7; }
+    .product-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .product-tag {
+      background: var(--off); font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+      padding: 4px 10px; color: #555; font-weight: 600;
+    }
+
+    /* ── ABOUT STRIP ── */
+    #about {
+      background: var(--black);
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+    .about-left {
+      padding: 90px 70px;
+    }
+    .about-left .sec-tag { text-align: left; padding-left: 0; color: var(--red-light); }
+    .about-left .sec-tag::before { display: none; }
+    .about-left .sec-tag::after { left: calc(100% + 0px); margin-left: 0; }
+    .about-left h2 {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 44px;
+      text-transform: uppercase; color: white; line-height: 1.1; margin-bottom: 24px;
+    }
+    .about-left h2 span { color: var(--red-light); }
+    .about-left p { color: var(--light); font-size: 15px; line-height: 1.8; margin-bottom: 16px; font-weight: 300; }
+    .about-left .founder-row {
+      display: flex; align-items: center; gap: 16px; margin-top: 36px;
+      padding-top: 28px; border-top: 1px solid var(--steel);
+    }
+    .founder-hex {
+      width: 56px; height: 56px; background: var(--red);
+      clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 18px; color: white; flex-shrink: 0;
+    }
+    .founder-name { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 20px; color: white; }
+    .founder-title { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--red-light); margin-top: 2px; }
+    .about-right {
+      background: var(--red);
+      padding: 90px 70px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .about-right h3 {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 32px;
+      text-transform: uppercase; color: white; margin-bottom: 32px;
+    }
+    .checklist { display: flex; flex-direction: column; gap: 20px; }
+    .check-item { display: flex; align-items: flex-start; gap: 14px; }
+    .check-icon {
+      width: 28px; height: 28px; background: rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0; margin-top: 1px;
+    }
+    .check-item h4 { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 17px; color: white; text-transform: uppercase; }
+    .check-item p { font-size: 13px; color: rgba(255,255,255,0.78); line-height: 1.6; margin-top: 3px; }
+
+    /* ── WHY CHOOSE ── */
+    #why { padding: 90px 60px; background: var(--off); }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; margin-top: 56px; }
+    .why-card { background: white; padding: 40px 28px; text-align: center; border-bottom: 3px solid transparent; transition: border-color .3s, box-shadow .3s; }
+    .why-card:hover { border-color: var(--red); box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+    .why-icon { font-size: 40px; margin-bottom: 20px; display: block; }
+    .why-card h3 { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; color: var(--black); margin-bottom: 10px; }
+    .why-card p { font-size: 13px; color: var(--mid); line-height: 1.7; }
+
+    /* ── CALL TO ACTION ── */
+    .cta-band {
+      background: var(--red);
+      padding: 70px 60px;
+      display: flex; align-items: center; justify-content: space-between; gap: 40px;
+    }
+    .cta-band h2 { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 40px; text-transform: uppercase; color: white; line-height: 1.1; }
+    .cta-band p { color: rgba(255,255,255,0.82); font-size: 15px; margin-top: 8px; }
+    .cta-btns { display: flex; gap: 14px; flex-shrink: 0; }
+    .cta-white {
+      background: white; color: var(--red); padding: 15px 36px;
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px;
+      letter-spacing: 1.5px; text-transform: uppercase; transition: background .2s;
+    }
+    .cta-white:hover { background: var(--off); }
+    .cta-outline-w {
+      border: 2px solid rgba(255,255,255,0.7); color: white; padding: 15px 36px;
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px;
+      letter-spacing: 1.5px; text-transform: uppercase; transition: border-color .2s;
+    }
+    .cta-outline-w:hover { border-color: white; }
+
+    /* ── CONTACT ── */
+    #contact { padding: 90px 60px; background: white; }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; margin-top: 56px; }
+    .contact-cards { display: flex; flex-direction: column; gap: 20px; }
+    .contact-card { background: var(--off); padding: 28px; display: flex; align-items: flex-start; gap: 18px; border-left: 3px solid var(--red); }
+    .cc-icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+    .cc-label { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--black); margin-bottom: 6px; }
+    .cc-val { font-size: 14px; color: #444; line-height: 1.7; }
+    .cc-val a { color: #444; transition: color .2s; }
+    .cc-val a:hover { color: var(--red); }
+    .wa-btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: #25D366; color: white; padding: 11px 22px; margin-top: 10px;
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 13px;
+      letter-spacing: 1.5px; text-transform: uppercase; transition: background .2s;
+    }
+    .wa-btn:hover { background: #1fba58; }
+    .map-wrap { border: 1px solid #DDD; overflow: hidden; }
+    .map-wrap iframe { width: 100%; height: 420px; border: none; display: block; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--black); color: var(--gray); }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px;
+      padding: 60px 60px 40px;
+      border-bottom: 1px solid var(--steel);
+    }
+    .footer-brand .logo-main { color: white; font-size: 24px; }
+    .footer-brand .logo-sub { margin-bottom: 16px; display: block; }
+    .footer-brand p { font-size: 13px; line-height: 1.8; color: var(--gray); max-width: 320px; margin-bottom: 20px; }
+    .footer-heading { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: white; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 13px; color: var(--gray); transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--red-light); }
+    .footer-bottom {
+      padding: 20px 60px; display: flex; justify-content: space-between; align-items: center;
+      font-size: 12px;
+    }
+    .footer-bottom span { color: var(--red-light); }
+
+    /* ── TICKER ── */
+    .ticker { background: var(--red); padding: 11px 0; overflow: hidden; }
+    .ticker-track { display: flex; animation: ticker 28s linear infinite; white-space: nowrap; }
+    .ticker-item {
+      display: inline-flex; align-items: center; gap: 24px; padding: 0 28px;
+      font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 13px;
+      letter-spacing: 2px; text-transform: uppercase; color: white;
+    }
+    .ticker-item::after { content: '|'; opacity: 0.4; font-size: 12px; }
+    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .topbar, nav { padding-left: 24px; padding-right: 24px; }
+      #industries, #products, #why, #contact, .cta-band { padding-left: 24px; padding-right: 24px; }
+      .slide-content { padding: 0 40px; }
+      .products-grid, .why-grid { grid-template-columns: 1fr 1fr; }
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      #about { grid-template-columns: 1fr; }
+      .about-left, .about-right { padding: 60px 36px; }
+      .footer-top { grid-template-columns: 1fr 1fr; padding: 40px 24px 28px; }
+      .footer-bottom { padding: 16px 24px; }
+      .contact-wrap { grid-template-columns: 1fr; }
+      .cta-band { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 700px) {
+      .topbar { display: none; }
+      nav ul { display: none; }
+      nav { padding: 0 20px; }
+      #hero { height: 420px; }
+      .slide-content { padding: 0 24px; }
+      .stats-band { grid-template-columns: 1fr 1fr; }
+      .products-grid, .why-grid, .industries-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      h1 { font-size: 38px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span>📍 CSR Complex, Chakripuram, ECIL, Hyderabad</span>
+      <a href="tel:+919948699156">📞 +91 99486 99156</a>
+      <a href="mailto:grtborewells@gmail.com">✉ grtborewells@gmail.com</a>
+    </div>
+    <div class="topbar-right">
+      <a href="https://wa.me/919948699156" target="_blank">💬 WhatsApp Us</a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <div class="logo-badge">GRT</div>
+      <div class="logo-words">
+        <div class="logo-main">Ganapathi Rock Tools</div>
+        <div class="logo-sub">Borewell Equipment · Hyderabad</div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact" class="nav-contact-btn">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SLIDER -->
+  <section id="hero">
+    <div class="slides" id="slidesTrack">
+
+      <!-- Slide 1 -->
+      <div class="slide">
+        <div class="slide-bg" style="background-image: linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);"></div>
+        <div class="slide-overlay"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding-right:80px;font-size:200px;opacity:0.06;">💧</div>
+        <div class="slide-content">
+          <div class="slide-tag">Borewell Specialists · Hyderabad</div>
+          <h1>Your Borewell.<br><span>Our Tools.</span><br>Done Right.</h1>
+          <p>Hyderabad's trusted supplier of DTH hammers, drill bits, drill rods & borewell equipment. Serving contractors and drillers for over 20 years.</p>
+          <a href="#products" class="slide-btn">View Products</a>
+          <a href="https://wa.me/919948699156" target="_blank" class="slide-btn-outline">💬 WhatsApp Order</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="slide-bg" style="background-image: linear-gradient(135deg,#1a0a0a 0%,#2d1414 100%);"></div>
+        <div class="slide-overlay"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding-right:80px;font-size:200px;opacity:0.06;">⚙️</div>
+        <div class="slide-content">
+          <div class="slide-tag">DTH Equipment</div>
+          <h1>DTH Hammers<br>& <span>Drill Bits</span><br>In Stock.</h1>
+          <p>Full range of Down-the-Hole hammers and drill bits for borewell drilling in hard rock terrain. All sizes available for fast delivery.</p>
+          <a href="#products" class="slide-btn">See DTH Range</a>
+          <a href="#contact" class="slide-btn-outline">Get a Quote</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="slide-bg" style="background-image: linear-gradient(135deg,#0a0f1a 0%,#141e2d 100%);"></div>
+        <div class="slide-overlay"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding-right:80px;font-size:200px;opacity:0.06;">🛠️</div>
+        <div class="slide-content">
+          <div class="slide-tag">100+ Monthly Deliveries</div>
+          <h1>Always <span>In Stock.</span><br>Always On<br>Time.</h1>
+          <p>We fulfill 100+ borewell equipment orders every month. Drill rods, casing pipes, accessories — if you need it for your rig, we have it ready.</p>
+          <a href="#contact" class="slide-btn">Contact Us</a>
+          <a href="#about" class="slide-btn-outline">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+    <button class="slider-arrow arrow-left" onclick="changeSlide(-1)">&#8592;</button>
+    <button class="slider-arrow arrow-right" onclick="changeSlide(1)">&#8594;</button>
+    <div class="slider-dots" id="dotsContainer">
+      <div class="dot active" onclick="goSlide(0)"></div>
+      <div class="dot" onclick="goSlide(1)"></div>
+      <div class="dot" onclick="goSlide(2)"></div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="stat-cell">
+      <div class="stat-num">20+</div>
+      <div class="stat-lbl">Years Experience</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">100+</div>
+      <div class="stat-lbl">Orders Per Month</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">6+</div>
+      <div class="stat-lbl">Product Categories</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">1</div>
+      <div class="stat-lbl">Call Away — 99486 99156</div>
+    </div>
+  </div>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <div class="ticker-item">DTH Hammers</div>
+      <div class="ticker-item">DTH Drill Bits</div>
+      <div class="ticker-item">Drill Rods & Pipes</div>
+      <div class="ticker-item">Casing Pipes</div>
+      <div class="ticker-item">Borewell Accessories</div>
+      <div class="ticker-item">Button Bits</div>
+      <div class="ticker-item">Top Hammer Tools</div>
+      <div class="ticker-item">Rock Drilling Equipment</div>
+      <div class="ticker-item">Hyderabad Based Supplier</div>
+      <div class="ticker-item">20+ Years in the Industry</div>
+      <!-- duplicate for loop -->
+      <div class="ticker-item">DTH Hammers</div>
+      <div class="ticker-item">DTH Drill Bits</div>
+      <div class="ticker-item">Drill Rods & Pipes</div>
+      <div class="ticker-item">Casing Pipes</div>
+      <div class="ticker-item">Borewell Accessories</div>
+      <div class="ticker-item">Button Bits</div>
+      <div class="ticker-item">Top Hammer Tools</div>
+      <div class="ticker-item">Rock Drilling Equipment</div>
+      <div class="ticker-item">Hyderabad Based Supplier</div>
+      <div class="ticker-item">20+ Years in the Industry</div>
+    </div>
+  </div>
+
+  <!-- INDUSTRIES WE SERVE -->
+  <section id="industries">
+    <div class="sec-header">
+      <div class="sec-tag">Who We Serve</div>
+      <h2>Industries We Supply</h2>
+      <p>From domestic water borewells to construction and mining — our drilling equipment serves every sector that goes into the ground.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card">
+        <div class="industry-card-bg" style="background: linear-gradient(135deg,#0d1f3c,#1a3a5c); background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\".9em\" font-size=\"90\" opacity=\"0.12\">💧</text></svg>'), linear-gradient(135deg,%230d1f3c,%231a3a5c);"></div>
+        <div class="industry-card-bg" style="background: linear-gradient(160deg,#0d2240 0%,#1a4066 100%);"></div>
+        <div class="industry-overlay"></div>
+        <div class="industry-label">
+          <span class="industry-icon">💧</span>
+          <h3>Water Well / Borewell</h3>
+          <p>Our core expertise — domestic & agricultural borewells</p>
+        </div>
+      </div>
+      <div class="industry-card">
+        <div class="industry-card-bg" style="background: linear-gradient(160deg,#1a1a0d 0%,#3d3a10 100%);"></div>
+        <div class="industry-overlay"></div>
+        <div class="industry-label">
+          <span class="industry-icon">🏗️</span>
+          <h3>Construction</h3>
+          <p>Foundation drilling & pile boring equipment</p>
+        </div>
+      </div>
+      <div class="industry-card">
+        <div class="industry-card-bg" style="background: linear-gradient(160deg,#1a0d0d 0%,#3d1010 100%);"></div>
+        <div class="industry-overlay"></div>
+        <div class="industry-label">
+          <span class="industry-icon">⛏️</span>
+          <h3>Mining & Quarry</h3>
+          <p>Hard rock drilling tools for mining operations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="sec-header">
+      <div class="sec-tag">What We Supply</div>
+      <h2>Our Product Range</h2>
+      <p>Everything a borewell driller needs — from down-the-hole hammers to the last casing pipe. All products available in Hyderabad.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-card-top" style="background:#1C1C1C;">
+          <span>⚙️</span>
+          <div class="product-card-top-num">01</div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-cat">DTH Equipment</div>
+          <h3>DTH Hammers</h3>
+          <p>Down-the-Hole hammers for borewell drilling in hard rock. High air efficiency, fast penetration, long service life in Telangana's granite terrain.</p>
+          <div class="product-tags">
+            <span class="product-tag">4" Hammer</span>
+            <span class="product-tag">5" Hammer</span>
+            <span class="product-tag">6" Hammer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top" style="background:#1C1C1C;">
+          <span>🔩</span>
+          <div class="product-card-top-num">02</div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-cat">DTH Equipment</div>
+          <h3>DTH Drill Bits</h3>
+          <p>Button bits and flat-face bits in all standard diameters. Carbide inserts for extended wear life in hard rock borewell applications.</p>
+          <div class="product-tags">
+            <span class="product-tag">Button Bits</span>
+            <span class="product-tag">Flat Face</span>
+            <span class="product-tag">All Sizes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top" style="background:#1C1C1C;">
+          <span>📏</span>
+          <div class="product-card-top-num">03</div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-cat">Drill String</div>
+          <h3>Drill Rods & Pipes</h3>
+          <p>Heavy-duty drill rods and drill pipes for borewell and water well drilling. Multiple lengths and diameters available to match your rig.</p>
+          <div class="product-tags">
+            <span class="product-tag">Drill Rods</span>
+            <span class="product-tag">Drill Pipes</span>
+            <span class="product-tag">Extensions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top" style="background:#1C1C1C;">
+          <span>🏗️</span>
+          <div class="product-card-top-num">04</div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-cat">Casing</div>
+          <h3>Casing Pipes</h3>
+          <p>PVC and MS borewell casing pipes for structural lining and protection. Available in all standard borewell diameters for permanent installations.</p>
+          <div class="product-tags">
+            <span class="product-tag">PVC Casing</span>
+            <span class="product-tag">MS Casing</span>
+            <span class="product-tag">All Diameters</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top" style="background:#1C1C1C;">
+          <span>🔧</span>
+          <div class="product-card-top-num">05</div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-cat">Accessories</div>
+          <h3>Borewell Accessories</h3>
+          <p>Couplings, shank adaptors, centralizers, guide tubes, sub adapters — all the essential accessories to keep your borewell rig running efficiently.</p>
+          <div class="product-tags">
+            <span class="product-tag">Couplings</span>
+            <span class="product-tag">Adaptors</span>
+            <span class="product-tag">Guide Tubes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card-top" style="background:#1C1C1C;">
+          <span>🪨</span>
+          <div class="product-card-top-num">06</div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-cat">Top Hammer</div>
+          <h3>Rock Drilling Tools</h3>
+          <p>Threaded bits, taper bits, drifter rods and top hammer tools for surface and underground rock drilling applications in Hyderabad and Telangana.</p>
+          <div class="product-tags">
+            <span class="product-tag">Threaded Bits</span>
+            <span class="product-tag">Taper Bits</span>
+            <span class="product-tag">Drifter Rods</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-left">
+      <div class="sec-tag">About Ganapathi Rock Tools</div>
+      <h2>Hyderabad's<br><span>Borewell</span><br>Equipment Hub</h2>
+      <p>Ganapathi Rock Tools has been the go-to supplier for borewell contractors and drillers across Hyderabad for over 20 years. We specialise exclusively in borewell and rock drilling equipment — no distractions, just the tools that matter.</p>
+      <p>Based out of ECIL, Hyderabad, we understand the local geology, the demands of hard rock borewell drilling in Telangana, and what contractors need to keep their rigs running and their projects on schedule.</p>
+      <p>Every month we supply 100+ products to drillers across the region. From a single drill bit to a full borewell kit — we have it in stock and ready to go.</p>
+      <div class="founder-row">
+        <div class="founder-hex">KR</div>
+        <div>
+          <div class="founder-name">Kandadi Ranga Reddy</div>
+          <div class="founder-title">Founder & Operator</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <h3>Why Contractors Trust Us</h3>
+      <div class="checklist">
+        <div class="check-item">
+          <div class="check-icon">✓</div>
+          <div>
+            <h4>Borewell-Only Focus</h4>
+            <p>We specialise exclusively in borewell & rock drilling equipment — so you always get the right advice and the right product.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon">✓</div>
+          <div>
+            <h4>Always In Stock</h4>
+            <p>100+ orders fulfilled every month means we carry the depth of stock you need. No waiting, no delays when your rig is ready.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon">✓</div>
+          <div>
+            <h4>Order via WhatsApp</h4>
+            <p>Speak directly to the founder. Tell us what you need and we'll arrange it fast — no middlemen, no call centres.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon">✓</div>
+          <div>
+            <h4>20+ Years Experience</h4>
+            <p>Two decades serving Hyderabad's borewell industry. We know the terrain, we know the equipment, and we know what works.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why">
+    <div class="sec-header">
+      <div class="sec-tag">The Ganapathi Advantage</div>
+      <h2>Why Choose Us</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">🎯</span>
+        <h3>Specialist Supplier</h3>
+        <p>100% focused on borewell and rock drilling equipment. We know exactly what you need and stock it consistently.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">⚡</span>
+        <h3>Fast Availability</h3>
+        <p>Products in stock and ready to go. 100+ orders fulfilled monthly means we maintain the inventory levels contractors depend on.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">📲</span>
+        <h3>Direct WhatsApp Orders</h3>
+        <p>Message us on WhatsApp and get your order sorted immediately. Talk directly to the owner — no delays, no confusion.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">📍</span>
+        <h3>Local, Trusted, Reliable</h3>
+        <p>Based in ECIL, Hyderabad for 20+ years. A name borewell contractors across Telangana know and trust.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div>
+      <h2>Ready to Order Borewell Equipment?</h2>
+      <p>Call or WhatsApp us directly — +91 99486 99156. We'll get your order sorted fast.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="https://wa.me/919948699156" target="_blank" class="cta-white">💬 WhatsApp Now</a>
+      <a href="tel:+919948699156" class="cta-outline-w">📞 Call Us</a>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sec-header">
+      <div class="sec-tag">Reach Us</div>
+      <h2>Contact Ganapathi Rock Tools</h2>
+      <p>Visit us at ECIL, Hyderabad, call, email or WhatsApp — we're always ready to help with your borewell equipment needs.</p>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="cc-icon">📞</div>
+          <div>
+            <div class="cc-label">Phone / WhatsApp</div>
+            <div class="cc-val">
+              <a href="tel:+919948699156">+91 99486 99156</a>
+              <br>
+              <a href="https://wa.me/919948699156" class="wa-btn" target="_blank">💬 Order on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">✉️</div>
+          <div>
+            <div class="cc-label">Email</div>
+            <div class="cc-val"><a href="mailto:grtborewells@gmail.com">grtborewells@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">📍</div>
+          <div>
+            <div class="cc-label">Address</div>
+            <div class="cc-val">CSR Complex, Chakripuram,<br>ECIL, Hyderabad, Telangana</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">⏰</div>
+          <div>
+            <div class="cc-label">Working Hours</div>
+            <div class="cc-val">Monday – Saturday: 9:00 AM – 7:00 PM<br>Sunday: By Appointment</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d476.67!2d78.58123!3d17.47997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-main" style="font-family:'Rajdhani',sans-serif;font-weight:700;">Ganapathi Rock Tools</div>
+        <span class="logo-sub">Borewell Equipment · Hyderabad</span>
+        <p>Hyderabad's trusted supplier of borewell drilling equipment — DTH hammers, drill bits, drill rods, casing pipes and accessories. Serving borewell contractors across Telangana for 20+ years.</p>
+        <a href="https://wa.me/919948699156" target="_blank" class="wa-btn">💬 +91 99486 99156</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Quick Links</div>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Products</div>
+        <ul>
+          <li><a href="#products">DTH Hammers</a></li>
+          <li><a href="#products">DTH Drill Bits</a></li>
+          <li><a href="#products">Drill Rods & Pipes</a></li>
+          <li><a href="#products">Casing Pipes</a></li>
+          <li><a href="#products">Borewell Accessories</a></li>
+          <li><a href="#products">Rock Drilling Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Ganapathi Rock Tools · Founded by <span>Kandadi Ranga Reddy</span> · ECIL, Hyderabad</span>
+      <a href="mailto:grtborewells@gmail.com" style="color:var(--gray);">grtborewells@gmail.com</a>
+    </div>
+  </footer>
+
+  <!-- SLIDER SCRIPT -->
+  <script>
+    let current = 0;
+    const total = 3;
+    const track = document.getElementById('slidesTrack');
+    const dots = document.querySelectorAll('.dot');
+    let autoTimer;
+
+    function updateSlider() {
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function changeSlide(dir) {
+      current = (current + dir + total) % total;
+      updateSlider();
+      resetAuto();
+    }
+
+    function goSlide(n) {
+      current = n;
+      updateSlider();
+      resetAuto();
+    }
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => changeSlide(1), 5000);
+    }
+
+    autoTimer = setInterval(() => changeSlide(1), 5000);
+  </script>
+
+</body>
+</html>
